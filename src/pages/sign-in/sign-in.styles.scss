@@ -1,0 +1,23 @@
+.sign-in{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 400px;
+
+    .title {
+        margin: 10px 0;
+    }
+    .custom{
+        border-radius: 7px;
+     
+        background-color: white;
+        padding: 10px 10px 10px 10px;
+        border: 2px solid  #9D1309;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
