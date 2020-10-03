@@ -5,31 +5,31 @@ const SHOP_DATA = [
         routeName: 'pizza',
         items: [
             {
-                id: 1,
+                id: 11,
                 name: 'Bagel Pizza',
                 imageUrl: '/img/pizza/bagel-pizza.jpg',
                 price: 25
             },
             {
-                id: 2,
+                id: 12,
                 name: 'Baked Pizza',
                 imageUrl: '/img/pizza/baked-pizza.jpg',
                 price: 18
             },
             {
-                id: 3,
+                id: 13,
                 name: 'Breakfast Pizza',
                 imageUrl: '/img/pizza/breakfast-pizza.jpg',
                 price: 35
             },
             {
-                id: 4,
+                id:14,
                 name: 'Brown Pizza',
                 imageUrl: '/img/pizza/brown-pizza.jpg',
                 price: 25
             },
             {
-                id: 5,
+                id: 15,
                 name: 'Californian Pizza',
                 imageUrl: '/img/californian-pizza.jpg',
                 price: 18
