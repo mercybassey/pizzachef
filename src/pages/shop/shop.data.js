@@ -31,7 +31,7 @@ const SHOP_DATA = [
             {
                 id: 15,
                 name: 'Californian Pizza',
-                imageUrl: '/img/californian-pizza.jpg',
+                imageUrl: '/img/pizza/californian-pizza.jpg',
                 price: 18
             },
             {

@@ -10,11 +10,13 @@ const config = {
     storageBucket: "pizza-data-b8661.appspot.com",
     messagingSenderId: "866635169256",
     appId: "1:866635169256:web:783be2388237a52765385d"
-};
+  };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if(!userAuth) return;
+
     const userRef = firestore.doc(`users/${userAuth.uid}`);
+    
     const snapShot = await userRef.get();
 
 
@@ -26,6 +28,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
             await userRef.set({
                 displayName,
                 email,
+                createdAt,
                 ...additionalData
             })
         } catch (error) {
