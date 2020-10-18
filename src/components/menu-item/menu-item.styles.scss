@@ -21,10 +21,22 @@
       opacity: 0.9;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    width: 115px;
+    margin: 0 7px 10px;
+  }
+
+ 
   
  
   &.large{
-    height: 350px;
+    height: 330px;
+
+    @media screen and (max-width: 800px) {
+      height: 250px;
+    }
+    
   }
 
   &:first-child {

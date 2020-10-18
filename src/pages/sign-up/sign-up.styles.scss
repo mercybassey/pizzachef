@@ -5,6 +5,12 @@
     position: relative;
     left: 400px;
 
+    @media screen and (max-width: 800px) {
+        width:300px;
+        margin-left: -380px;
+        margin-bottom: 98px;
+    }
+
     .title {
         margin: 10px 0;
     }
