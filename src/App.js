@@ -66,7 +66,7 @@ class App extends React.Component {
             )
             }
           />
-          <Route  path='/signup' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignUp />)} />
+          <Route  path='/signup' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignUp /> )} />
         </Switch>
         <Footer/>
       </div>
@@ -84,3 +84,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+
+
