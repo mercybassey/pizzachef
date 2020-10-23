@@ -34,6 +34,7 @@ export const LogoContainer = styled(Link)`
     @media screen and (max-width: 800px) {
         width: 50px;
         padding: 0;
+        margin-left: 40px;
     }
 
 `;
@@ -80,7 +81,7 @@ export const OptionLink = styled(Link)`
 
     @media screen and (max-width: 800px) {
         font-size: 18px;
-        padding: 12px;
+        padding: 10px;
     }
    
 

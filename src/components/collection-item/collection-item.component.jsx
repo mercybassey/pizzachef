@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import {Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 
 import { addItem } from '../../redux/cart/cart.actions';
@@ -33,7 +33,7 @@ const CollectionItem = ({ item, addItem, currentUser }) => {
         </CollectionFooterContainer>
         <AddButton
           className='add-button'
-          onClick={() => currentUser  ? (addItem(item)) : (alert('SignIn to continue'))}
+          onClick={() => currentUser  ? (addItem(item)) : (alert('SignIn to Add Items To Cart'))}
          >
           ADD TO CART
         </AddButton>
@@ -41,15 +41,7 @@ const CollectionItem = ({ item, addItem, currentUser }) => {
     );
 };
 
-// {currentUser ? (
-//   <AddButton
-//   className='add-button'
-//   onClick={() =>(addItem(item))}
-//  >
-//   ADD TO CART
-// </AddButton>)
-// : ( <Route  path='/signup' render={() => (<SignUp /> )}   />)
-// }
+
   
 
 const mapStateToProps = createStructuredSelector ({
