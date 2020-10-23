@@ -37,6 +37,10 @@ export const LogoContainer = styled(Link)`
         margin-left: 40px;
     }
 
+    @media screen and (max-width: 375px) {
+        margin-left: 10px;
+    }
+
 `;
 
 export const OptionsContainer = styled.div`
