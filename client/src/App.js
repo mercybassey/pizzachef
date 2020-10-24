@@ -42,7 +42,7 @@ const App = ({ checkUserSession, currentUser }) => {
           )
           }
         />
-        <Route  path='/signup' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignUp /> )} />
+        <Route  path='/signup' render={() => currentUser ? (<Redirect to='/' />) : (<SignUp /> )} />
       </Switch>
       <Footer/>
     </div>
