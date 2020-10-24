@@ -1,8 +1,13 @@
-body {
-    font-family: 'Open Sans Condensed';
-    padding: 20px 60px;
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+}
 
-   
+body {
+  font-family: 'Open Sans Condensed';
+  padding: 20px 60px;
+  
 }
 
 @media screen and (max-width: 800px) {
@@ -11,9 +16,11 @@ body {
   }
   body {
     padding: 5px 5px 5px 0px;
-   
   }
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -36,8 +43,18 @@ a {
     box-sizing: border-box;
 }
 
+*::before, *::after {
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 800px) {
   * {
     box-sizing: border-box;
   }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

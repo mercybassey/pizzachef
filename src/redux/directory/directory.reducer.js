@@ -21,7 +21,7 @@ const INITIAL_STATE = {
         title: 'pasta',
         imageUrl:'/img/pasta.jpg',
         id:4,
-        
+        size: 'large',
         linkUrl:'shop/pasta'
     },
     {

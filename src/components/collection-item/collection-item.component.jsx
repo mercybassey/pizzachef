@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
 
 
 import { addItem } from '../../redux/cart/cart.actions';
@@ -17,7 +16,6 @@ import {
     PriceContainer
 } from './collection-item.styles';
 
-import SignIn from '../../pages/sign-in/sign-in.component';
 
 
 

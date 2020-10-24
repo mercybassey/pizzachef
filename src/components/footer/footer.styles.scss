@@ -5,13 +5,33 @@
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 1fr 5rem;
     height: 100%;
+    
 }
 
 .footer{
     grid-area: footer;
     color:#9D1309;
-    font-size: large;
+    font-size: medium;
     font-weight: bolder; 
     text-align: center;
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    height: 2.5rem;
+   
+    @media screen and (max-width: 375px) {
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        height: 2.5rem;
+    }
+    
  
 }

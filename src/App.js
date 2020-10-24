@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -20,44 +20,34 @@ import { checkUserSession } from './redux/user/user.actions';
 import Footer from './components/footer/footer.component';
 
 
-class App extends React.Component {
+const App = ({ checkUserSession, currentUser }) => {
+  useEffect(() => {
+    checkUserSession()
+  }, [checkUserSession])
   
+  return (
+    <div>
+      <Header/>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route  path='/shop' component={ShopPage} />
+        <Route  exact path='/checkout' component={CheckoutPage} />
+        <Route  exact 
+        path='/signin' 
+        render={() => 
+          currentUser ? (
+          <Redirect to='/' />
+          ) : (
+          <SignIn />
+          )
+          }
+        />
+        <Route  path='/signup' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignUp /> )} />
+      </Switch>
+      <Footer/>
+    </div>
+  );
 
-  unsubscribeFromAuth = null;
-
-  componentDidMount() {
-    const { checkUserSession } = this.props;
-    checkUserSession();
-  };
-
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  };
-
-  render() {
-    return (
-      <div>
-        <Header/>
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route  path='/shop' component={ShopPage} />
-          <Route  exact path='/checkout' component={CheckoutPage} />
-          <Route  exact 
-          path='/signin' 
-          render={() => 
-            this.props.currentUser ? (
-            <Redirect to='/' />
-            ) : (
-            <SignIn />
-            )
-            }
-          />
-          <Route  path='/signup' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignUp /> )} />
-        </Switch>
-        <Footer/>
-      </div>
-    );
-  }
   
 }
 
